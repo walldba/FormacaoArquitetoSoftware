@@ -10,20 +10,12 @@ namespace PilaresOOP
 
         private static void AquecerAgua() { }
         private static void MoerGraos() { }
-        private static void PrepararCafe()
+        public void PrepararCafe()
         {
             AquecerAgua();
             MoerGraos();
         }
-
-        public override void Ligar()
-        {
-
-        }
-
-        public override void Desligar()
-        {
-
-        }
+        public override void Ligar(){}
+        public override void Desligar(){}
     }
 }
