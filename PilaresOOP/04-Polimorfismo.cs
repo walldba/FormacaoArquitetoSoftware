@@ -21,7 +21,7 @@ namespace PilaresOOP
 
         }
 
-        public override void Ligar()
+        public override void Desligar()
         {
 
         }

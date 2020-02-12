@@ -5,10 +5,10 @@ namespace PilaresOOP
         private readonly string _nome;
         private readonly int _voltagem;
 
-        protected Eletrodomestico(string nome, int _voltagem)
+        protected Eletrodomestico(string nome, int voltagem)
         {
             _nome = nome;
-            _voltagem = _voltagem;
+            _voltagem = voltagem;
         }
 
         public abstract void Ligar();
