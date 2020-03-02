@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PrincipiosSOLID
+namespace PrincipiosSOLID.ResponsabilidadeUnica
 {
     public class ResponsabilidadeUnica
     {
@@ -13,6 +13,7 @@ namespace PrincipiosSOLID
         public bool Validar()
         {
             //O Cliente deve ser capaz de validar seus dados, como CPF, Email...
+            return true;
         }
     }
 }
