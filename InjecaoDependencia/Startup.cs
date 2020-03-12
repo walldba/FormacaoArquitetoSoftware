@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InjecaoDependencia.Cases;
 using InversaoDependencia;
 using InversaoDependencia.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,7 @@ namespace InjecaoDependencia
             services.AddScoped<IClienteService, ClienteService>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IEmailServices, EmailServices>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 
             services.Configure<CookiePolicyOptions>(options =>
