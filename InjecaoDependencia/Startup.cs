@@ -34,6 +34,22 @@ namespace InjecaoDependencia
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 
+            //Multiplas Classes
+            services.AddTransient<Func<string, IService>>(serviceProvider => key =>
+            {
+                switch (key)
+                {
+                    case "A":
+                        return serviceProvider.GetService<ServiceA>();
+                    case "B":
+                        return serviceProvider.GetService<ServiceB>();
+                    case "C":
+                        return serviceProvider.GetService<ServiceC>();
+                    default:
+                        return null;
+                }
+            });
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
