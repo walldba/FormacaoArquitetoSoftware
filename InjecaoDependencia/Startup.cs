@@ -28,8 +28,10 @@ namespace InjecaoDependencia
         {
 
             services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<IEmailServices, EmailServices>();
 
-            
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
